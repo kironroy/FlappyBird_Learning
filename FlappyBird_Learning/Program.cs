@@ -14,6 +14,7 @@ namespace FlappyBird_Replica_ConsoleVersion
 {
     class Program
     {
+        
         public ConsoleKeyInfo keypress = new ConsoleKeyInfo();
         public Random rand = new Random();
 
@@ -23,7 +24,7 @@ namespace FlappyBird_Replica_ConsoleVersion
 
         public int score, highscore, pivotX, pivotY, height, width, falldelay, wingDelay, raiseSpeed, fallSpeed;
 
-        public int[,] birdX = new int[5, 5];
+        public int[,] birdX = new int[5, 5]; 
         public int[,] birdY = new int[5, 5];
         public char[,] bird = new char[5, 5];
         private char wing;
@@ -45,24 +46,6 @@ namespace FlappyBird_Replica_ConsoleVersion
         void ShowMainMenu()
         {
             int choiceID;
-
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("||========================================================||");
-            Console.WriteLine("||--------------------------------------------------------||");
-
-            Console.Write("||---------------------- ");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("FLAPPY BIRD");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(" ---------------------||");
-
-            Console.Write("||-------------------- ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("Console version");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(" -------------------||");
-            Console.WriteLine("||========================================================||");
 
             pivotX = 30;
             pivotY = 10;
@@ -109,17 +92,9 @@ namespace FlappyBird_Replica_ConsoleVersion
                 }
                 Console.WriteLine();
             }
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine();
-            Console.WriteLine("                     PLAY GAME - press 1                  ");
-            Console.WriteLine("                     HIGHSCORE - press 2                  ");
-            Console.WriteLine("                     HELP      - press 3                  ");
-            Console.WriteLine("                     CREDITS   - press 4                  ");
-            Console.WriteLine("                     QUIT GAME - press 5                  ");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("                        Have fun =))");
+
+            
+           
 
             while (true)
             {
@@ -228,25 +203,8 @@ namespace FlappyBird_Replica_ConsoleVersion
 
         void ViewHelp()
         {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine();
-            Console.WriteLine("||---------------------- FLAPPY BIRD ---------------------||");
-            Console.WriteLine("                    ** Console verion **");
-            Console.WriteLine("                        <<< HELPS >>>");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("         Keep the bird flying and avoiding the pipes");
-            Console.WriteLine("     Don't let him touch the ground or the top of window");
-            Console.WriteLine();
-            Console.WriteLine("    Keyboard buttons: - Press Spacebar to raise the bird");
-            Console.WriteLine("                      - Press R to restart game");
-            Console.WriteLine("                      - Press ESC to pause game");
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("           -- Press ESC to return to Main Menu --");
+            MenuPrompts.ViewHelpMenu(); // View help
+
             while (true)
             {
                 keypress = Console.ReadKey(true);
@@ -315,16 +273,8 @@ namespace FlappyBird_Replica_ConsoleVersion
 
         void Pause()
         {
-            Console.CursorTop = 10;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine();
-            Console.WriteLine("        ============================================        ");
-            Console.WriteLine("                         GAME PAUSED                        ");
-            Console.WriteLine("              Resume game             - press 1             ");
-            Console.WriteLine("              Restart game            - press 2             ");
-            Console.WriteLine("              Return to the Main Menu - press 3             ");
-            Console.WriteLine("        ============================================        ");
-            Console.ForegroundColor = ConsoleColor.Green;
+            MenuPrompts.PauseGame(); // pause game
+     
 
             while (true)
             {
@@ -569,7 +519,7 @@ namespace FlappyBird_Replica_ConsoleVersion
             }
             if (isfly)
             {
-                //Console.Beep();
+                
                 pivotY -= raiseSpeed;
                 wing = 'v';
                 falldelay = -1;
@@ -737,13 +687,16 @@ namespace FlappyBird_Replica_ConsoleVersion
 
         static void Main(string[] args)
         {
-            Program Fb = new Program();
-            Fb.ReadHighScoreFromFile();
-            Fb.Setup();
-            Fb.ShowMainMenu();
+            MenuPrompts.MenuTitle(); // FLAPPY BIRD TITLE
+            MenuPrompts.PlayerOptions(); // Player Options: PLAYGAME, EXIT GAME ...
+
+            Program flyingBird = new Program();
+            flyingBird.ReadHighScoreFromFile();
+            flyingBird.Setup();
+            flyingBird.ShowMainMenu();
             while (true)
             {
-                Fb.LoadScene();
+                flyingBird.LoadScene();
             }
         }
     }
