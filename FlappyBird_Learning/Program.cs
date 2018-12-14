@@ -7,7 +7,8 @@ using System.Threading;
 using System.IO;
 
 // orginal work by: https://github.com/hao-phan-cs/cs-flappybird-game
-// this is for learning purposes
+// this is for learning purposes 
+
 
 namespace FlappyBird_Replica_ConsoleVersion
 {
