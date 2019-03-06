@@ -2,7 +2,7 @@
 using System.Threading;
 using System.IO;
 
-namespace FlappyBirdLearn
+namespace ConsoleUI
 {
     public class MainGameLoop
     {

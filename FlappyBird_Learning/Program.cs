@@ -1,13 +1,9 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // orginal work by : https://github.com/hao-phan-cs
 // game here: https://github.com/hao-phan-cs/cs-flappybird-game
 
-namespace FlappyBirdLearn
-{ 
+namespace ConsoleUI
+{
 
     public class Program
     {

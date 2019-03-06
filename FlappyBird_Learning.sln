@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlappyBird_Learning", "FlappyBird_Learning\FlappyBird_Learning.csproj", "{81726EB1-FF1A-471C-A9F5-B8C4D9478DC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "FlappyBird_Learning\ConsoleUI.csproj", "{81726EB1-FF1A-471C-A9F5-B8C4D9478DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLibrary", "GameLibrary\GameLibrary.csproj", "{276754FC-A91B-478B-8980-0EE5A06F854F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{81726EB1-FF1A-471C-A9F5-B8C4D9478DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81726EB1-FF1A-471C-A9F5-B8C4D9478DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81726EB1-FF1A-471C-A9F5-B8C4D9478DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276754FC-A91B-478B-8980-0EE5A06F854F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276754FC-A91B-478B-8980-0EE5A06F854F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276754FC-A91B-478B-8980-0EE5A06F854F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276754FC-A91B-478B-8980-0EE5A06F854F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
