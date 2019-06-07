@@ -270,26 +270,7 @@ namespace ConsoleUI
                     if (keypress.Key == ConsoleKey.D2)
                         ShowMainMenu();
                 }
-                /*else if (Case == "return")
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.CursorTop = 10;
-                    Console.WriteLine();
-                    Console.WriteLine("        |------------------------------------------|        ");
-                    Console.WriteLine("        |          DO YOU WANT TO STOP GAME        |        ");
-                    Console.WriteLine("        |        AND RETURN TO THE MAIN MENU?      |        ");
-                    Console.WriteLine("        |               Yes - Press 1              |        ");
-                    Console.WriteLine("        |               No  - Press 2              |        ");
-                    Console.Write    ("        |------------------------------------------|        ");
-
-                    keypress = Console.ReadKey(true);
-                    if (keypress.Key == ConsoleKey.D1)
-                        ShowMainMenu();
-                    if (keypress.Key == ConsoleKey.D2)
-                    {
-                        break;
-                    }
-                }*/
+          
             }
         }
 
@@ -729,7 +710,4 @@ namespace ConsoleUI
         }
 
     }
-
-    
-    
 }
